@@ -17,4 +17,4 @@ TEST on your mobile, TEST on your device, TEST, TEST, TEST...  and Have fun !
 
 ## Ajouter par Sylvian
 
-lien vers le site : sylvian.miw.ovh/CMS/TP/day3
+lien vers le site : https://sylvian.miw.ovh/CMS/TP/day3
