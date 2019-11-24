@@ -1,9 +1,248 @@
 <!DOCTYPE html>
 <html lang="fr">
-<body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* --- Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* --- global --- */
+        h1 {
+            font-size: 60px;
+        }
+        h2 {
+            font-size: 25px;
+            color: #354052;
+        }
+        h3 {
+            font-size: 20px;
+            color: #354052;
+        }
+        p {
+            font-size: 19px;
+        }
 
-<strong>Let's party</strong>
+        /* --- Vue Mobile --- */
+        .container {
+            width: 100%;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            background-image: url("https://sylvian.miw.ovh/CMS/TP/day3/images/fond.jpg");
+            background-repeat: no-repeat;
+        }
+        .desc-photos, .desc-icons {
+            font-weight: normal;
+        }
 
+        .header {
+            width: 100%;
+            text-align: right;
+            color: white;
+        }
 
+        .bottom-right {
+            padding-top: 150px;
+            padding-right: 15px;
+            padding-bottom: 20px;
+        }
+
+        .header img {
+            width: 100%;
+        }
+        .title {
+            padding-top: 30px;
+            padding-bottom: 25px;
+        }
+        .content {
+            width: 100%;
+            border: 1px solid white;
+        }
+        .infos {
+            width: 100%;
+        }
+        .infos > tr {
+            width: 100%;
+        }
+        .infos > td {
+            display: block;
+            width: 30%;
+            margin: 50px auto;
+            padding: 1%;
+        }
+        .photos {
+            width: 100%;
+        }
+        .photos img {
+            width: 60%;
+        }
+        .photos > tr {
+            width: 100%;
+        }
+        .photos > td {
+            width: 100%;
+            display: block;
+            margin: 5% auto;
+        }
+        .bouton {
+            width: 100%;
+            color: white;
+            border-radius: 10px;
+            height: 85px;
+        }
+        .bouton > h2 a {
+            width: 100%;
+            color: white;
+            text-decoration: none;
+        }
+        .mentions {
+            width: 100%;
+            padding: 2rem 1rem;
+            font-weight: normal;
+            color: #354052;
+        }
+        .desktop {
+            display: none;
+        }
+        .sociaux {
+            display: inline-block;
+        }
+        .social {
+            padding: 0 15px 15px 15px;
+        }
+
+        /* --- Vue Desktop --- */
+        @media screen and  (min-width: 768px) {
+            .container {
+                width: 700px;
+                margin: 0 auto;
+                border: 1px solid #cccccc;
+            }
+            .content, .bottom-right {
+                width: 80%;
+                margin: 0 auto 50px auto;
+            }
+
+            .bottom-right {
+                padding-top: 250px;
+                padding-right: 0;
+                padding-bottom: 0;
+            }
+            .infos > td {
+                display: inline-block;
+            }
+            .photos > td {
+                display: inline-block;
+                width: 49%;
+            }
+            .desktop {
+                display: block;
+            }
+            .desc-photos {
+                font-size: 15px;
+            }
+            .subtitle {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0;">
+<table class="container">
+    <tr>
+        <td class="header">
+            <div class="bottom-right">
+                <p style="font-size: 60px">XMAS PARTY</p>
+                <p>Jeudi 19 dec à Gap</p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table class="content" bgcolor="#ffffff" align="center">
+                <tr>
+                    <td>
+                        <table width="100%">
+                            <tr>
+                                <td align="center">
+                                    <h3 class="title">!! PLACES LIMITÉES !!</h3>
+                                    <h2>A La + Grosse Soirée Etudiante</h2>
+                                </td>
+                            </tr>
+                            <tr class="infos" align="center">
+                                <td align="center">
+                                    <img src="https://sylvian.miw.ovh/CMS/TP/day3/images/icones/png/map.png" alt="logo map">
+                                    <p class="desc-icons">1er étage Batiment MIW 15/12/2019 à 20h</p>
+                                </td>
+                                <td align="center">
+                                    <img src="https://sylvian.miw.ovh/CMS/TP/day3/images/icones/png/play.png" alt="logo bouton play">
+                                    <p class="desc-icons">RnB, Hip Hop, Latino, House, Electro</p>
+                                </td>
+                                <td align="center">
+                                    <img src="https://sylvian.miw.ovh/CMS/TP/day3/images/icones/png/euro.png" alt="logo euro">
+                                    <p class="desc-icons">15€ + 1 conso (sur présentation de cet email)</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" align="center">
+                        <h2>La meilleur soirée étudiante de noël à Gap, avec en guess star 4 navigatrices !</h2>
+                        <table width="100%">
+                            <tr class="photos">
+                                <td align="center">
+                                    <img src="https://sylvian.miw.ovh/CMS/TP/day3/images/explorer.jpg" alt="Miss Edge">
+                                    <h3 class="subtitle">Miss Edge</h3>
+                                    <p class="desc-photos">A besoin de beaucoup d’attention !</p>
+                                </td>
+                                <td align="center">
+                                    <img src="https://sylvian.miw.ovh/CMS/TP/day3/images/firefox.jpg" alt="Miss Firefox">
+                                    <h3 class="subtitle">Miss Firefox</h3>
+                                    <p class="desc-photos">Libre et sauvage, tel un renard !</p>
+                                </td>
+                                <td align="center">
+                                    <img src="https://sylvian.miw.ovh/CMS/TP/day3/images/opera.jpg" alt="Miss Opera">
+                                    <h3 class="subtitle">Miss Opera</h3>
+                                    <p class="desc-photos">La norvégienne discrète et astucieuse</p>
+                                </td>
+                                <td align="center">
+                                    <img src="https://sylvian.miw.ovh/CMS/TP/day3/images/safari.jpg" alt="Miss Safari">
+                                    <h3 class="subtitle">Miss Safari</h3>
+                                    <p class="desc-photos">Ne perd pas le Nord !</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bouton" align="center" bgcolor="#C30078">
+                            <h2><a href="#">Inscription sur @miw05</a></h2>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table width="100%">
+                <tr align="center">
+                    <td class="mentions" bgcolor="#F5F5F5">
+                        <div class="sociaux">
+                            <a href="#"><img class="social" src="https://sylvian.miw.ovh/CMS/TP/day3/images/icones/png/facebook.png" alt="facebook"></a>
+                            <a href="#"><img class="social" src="https://sylvian.miw.ovh/CMS/TP/day3/images/icones/png/twitter.png" alt="twitter"></a>
+                            <a href="#"><img class="social" src="https://sylvian.miw.ovh/CMS/TP/day3/images/icones/png/instagram.png" alt="instagram"></a>
+                        </div>
+                        <p>Copyright © 2020 <strong>MIW’x.</strong> All Rights Reserved.</p>
+                        <p class="desktop">miw@miw.com | 06 07 08 09 10</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 </body>
 </html>

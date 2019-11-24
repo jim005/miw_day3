@@ -1,0 +1,127 @@
+/* --- Reset CSS --- */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* --- Initial class --- */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../images/fond.jpg");
+    background-position: top;
+    background-size: cover;
+}
+
+.bg-vert {
+    background-color: green;
+}
+.bg-mauve {
+    background-color: #C30078;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.show {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* --- Vue Mobile --- */
+
+.waitingfor {
+    display: flex;
+    flex-direction: column;
+}
+
+.send {
+    display: none;
+}
+
+.inpForm {
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;
+    color: #8D8B8B;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-color : #B2B2B2;
+    border-style: solid;
+    margin-bottom: 20px;
+}
+
+.inpSub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+.vip {
+    height: 50px;
+    width: 50px;
+    margin-left: 25px;
+    fill: white;
+}
+
+.emailSend {
+    width: 240px;
+    height: 195px;
+    fill: #C30078;
+}
+
+.cadreEmailSend {
+    width: 240px;
+    height: 195px;
+    border: 1px solid #C30078;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: #FFFFFF80;
+}
+
+/* --- Vue Tablette --- */
+@media screen and (min-width: 480px) {
+    .inpForm {
+        font-size: 25px;
+    }
+    .inpSub {
+        font-size: 25px;
+    }
+}
+
+/* --- Vue Desktop --- */
+@media screen and (min-width: 768px) {
+    .waitingfor {
+        flex-direction: row;
+    }
+
+    .inpForm {
+        font-size: 30px;
+        border-radius: 10px 0 0 10px;
+        margin-bottom: 0;
+    }
+
+    .inpSub {
+        border-radius: 0 10px 10px 0;
+        margin-left: 15px;
+    }
+
+    .cadreEmailSend {
+        padding: 20px 50px 40px 50px;
+    }
+}
