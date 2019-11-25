@@ -13,16 +13,22 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-
     $mail->CharSet      = 'UTF-8';
-    $mail->SMTPDebug    = 0;                            // Enable verbose debug output
-    $mail->isSMTP();                                    // Set mailer to use SMTP
-    $mail->Host         = 'auth.smtp.1and1.fr';         // Specify main and backup SMTP servers
-    $mail->SMTPAuth     = true;                         // Enable SMTP authentication
-    $mail->Username     = 'test@asheart.fr';            // SMTP username
-    $mail->Password     = '@x8NfZB8zDSFRgU';            // SMTP password
-    $mail->SMTPSecure   = 'ssl';                        // Enable TLS encryption, `ssl` also accepted
-    $mail->Port         =  465;                         // TCP port to connect to
+    $mail->SMTPDebug    = 0;
+    $mail->Host         = /* host here */;
+    $mail->SMTPAuth     = true;
+    $mail->Username     = /* username here */;
+    $mail->Password     = /* password here */;
+
+    //$mail->CharSet      = 'UTF-8';
+    //$mail->SMTPDebug    = 0;                            // Enable verbose debug output
+    //$mail->isSMTP();                                    // Set mailer to use SMTP
+    //$mail->Host         = 'auth.smtp.1and1.fr';         // Specify main and backup SMTP servers
+    //$mail->SMTPAuth     = true;                         // Enable SMTP authentication
+    //$mail->Username     = 'user';                       // SMTP username
+    //$mail->Password     = /* password here */;          // SMTP password
+    //$mail->SMTPSecure   = 'ssl';                        // Enable TLS encryption, `ssl` also accepted
+    //$mail->Port         =  465;                         // TCP port to connect to
 
 
     //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
@@ -49,7 +55,7 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'XMAS Party ! Jeudi 19 dec. a Gap';
     $mail->Body = file_get_contents('email/email_party.html');
-    $mail->AltBody = 'Soirée XMAS Party Jeudi 19 decembre a Gap. Venez nombreux. Nous aurons en notre compagnie quatre superbe navigatrices !';
+    $mail->AltBody = 'SoirÃ©e XMAS Party Jeudi 19 decembre a Gap. Venez nombreux. Nous aurons en notre compagnie quatre superbe navigatrices !';
 
     $mail->send();
     //echo 'Message has been sent';
