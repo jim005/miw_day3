@@ -1,0 +1,18 @@
+Don'T DO
+
+- pas de marges/padding
+- pas display
+
+DO
+
+- style in head
+- use div/ list
+
+
+table:
+valign="top" ou valign="bottom" pour choisir l’alignement du contenu en haut ou bas de cellule <td>
+bgcolor pour donner une couleur de fond à la cellule <td>
+border pour définir la largeur des 4 bordures (zéro équivalant à pas de bordure) et bordercolor pour définir une couleur de bordure (il n’est pas possible de ne définir qu’une bordure des 4 bordures à la fois)
+cellpadding="0" pour définir un espacement de zéro entre le contenu de la cellule et sa bordure et cellspacing="0"  pour définir un espacement de zéro entre les différentes cellules.
+colspan="X" pour fusionner X cellules
+align="left" ou align="right" ou align="center" pour aligner le texte

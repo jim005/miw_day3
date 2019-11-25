@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6e19ab37-e085-4cc3-af4c-4f80785f140a" name="ft" url="http://ftp-axelamghar.alwaysdata.net">
+        <fileTransfer host="ftp-axelamghar.alwaysdata.net" port="21" rootFolder="/www">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
