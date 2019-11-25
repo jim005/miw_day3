@@ -15,15 +15,14 @@ try {
     $mail->CharSet = 'utf-8';
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
-    $mail->Host = 'xxxxxx';                    // Set the SMTP server to send through
+    $mail->Host = '*****.***.*****';                    // Set the SMTP server to send through
     $mail->SMTPAuth = true;                                   // Enable SMTP authentication
-    $mail->Username = 'xxxxxxx';                     // SMTP username
-    $mail->Password = 'xxxxxx';                               // SMTP password
+    $mail->Username = '*****@*****.****.***';                     // SMTP username
+    $mail->Password = '*****';                               // SMTP password
 
     //Recipients
-    $mail->setFrom('xxxxxxxx', 'MIW Party official');
-    $mail->addAddress('xxxx@gmail.com', 'Compte perso');     // Add a recipient
-    $mail->addAddress('xxxx@outlook.com', 'Compte test');     // Add a recipient
+    $mail->setFrom('*****@****.****.****', 'MIW Party official');
+    $mail->addAddress($_GET['email']);     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
