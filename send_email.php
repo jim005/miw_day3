@@ -12,33 +12,25 @@ require 'vendor/autoload.php';
 $mail = new PHPMailer(true);
 
 try {
+    $mail->CharSet = 'utf-8';
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
-    //$mail->isSMTP();                                            // Send using SMTP
-    $mail->Host = 'mail.websenso.net';                    // Set the SMTP server to send through
+    $mail->Host = 'xxxxxx';                    // Set the SMTP server to send through
     $mail->SMTPAuth = true;                                   // Enable SMTP authentication
-    $mail->Username = 'miw@websenso.net';                     // SMTP username
-    $mail->Password = '%)g@{Z>75[6N';                               // SMTP password
-    //  $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-    //  $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Username = 'xxxxxxx';                     // SMTP username
+    $mail->Password = 'xxxxxx';                               // SMTP password
 
     //Recipients
-    $mail->setFrom('miw@websenso.net', 'MIW Party');
-    $mail->addAddress('james+miw@websenso.com', 'James');     // Add a recipient
-    $mail->addCC('miw@websenso.net');
-
-    // Attachments
-//    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+    $mail->setFrom('xxxxxxxx', 'MIW Party official');
+    $mail->addAddress('xxxx@gmail.com', 'Compte perso');     // Add a recipient
+    $mail->addAddress('xxxx@outlook.com', 'Compte test');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Here is the subject';
+    $mail->Subject = 'Invitation à la soirée XMAS party';
     $mail->Body = file_get_contents('email/email_party.html');
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
+    $mail->AltBody = 'Vous êtes invités à la soirée des MIW le 19 décembre ! Rendez-vous sur https://unsitedesoiree.fr pour en savoir davantage';
     $mail->send();
-    //echo 'Message has been sent';
     header('Location: index.php?delivery=sent');
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
