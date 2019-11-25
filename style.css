@@ -1,0 +1,109 @@
+html { box-sizing: border-box }
+*, *:before, *:after { box-sizing: inherit }
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl,
+dt, dd, blockquote, address { margin: 0; padding: 0 }
+
+body {
+    background: #eee;
+    background: url(img/Image1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form > * {
+    margin-top: 20px;
+}
+ 
+input,label {
+    height: 80px;
+    align-self: center;
+    padding: 0.5em;
+    font-size: 1.5em;
+}
+
+label {
+    width: 65%;
+    cursor: pointer;
+    margin-left: 0.5%;
+    text-align: center;
+    color: #fff;
+    background: #C30078;
+    display: flex;
+    justify-content: center;
+}
+
+label span {
+    margin-right: 10px;
+}
+
+span {
+    align-self: center;
+}
+
+input[type="email"] {
+    width: 65%;
+}
+input[type="submit"] {
+    display: none;
+}
+
+
+
+/* === MAIL SEND === */
+    /* ==== */
+        body div{
+            display: none;
+        }
+    /* ==== */
+
+body.delivery_sent form{
+    display: none;
+}
+
+body.delivery_sent div{
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    /* background: antiquewhite; */
+}
+
+.ok div {
+    margin: auto;
+    height: 30% !important;
+}
+
+.ok div img {
+    background: rgba(255, 255, 255, 0.76);
+    padding: 2em 1em;
+}
+
+/* === MEDIA === */
+
+
+@media only screen and (min-width: 992px) {
+    form {
+        flex-direction: row;
+    }
+    form > * {
+        margin-top: 0px;
+    }
+    label {
+        width: 20%;
+    }
+    
+    input[type="email"] {
+        width: 60%;
+    }
+}
