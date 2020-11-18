@@ -6,7 +6,7 @@
 if (!empty($_POST['email'])) {
 
     // Sending invitation by email
-    header('Location: send_email.php');
+    header('Location: send_email.php?email='.$_POST['email']);
     exit;
 
 }
@@ -39,7 +39,7 @@ if (!empty($_GET['delivery']) and $_GET['delivery'] === "sent") {
 </head>
 <body class="<?= $body_class ?>">
 
-<form action="#" method="post">
+<form action="send_email.php" method="post">
     <input type="email" name="email" placeholder="Ton email de star..." required/>
     <input type="submit" value="Submit"/>
 </form>
