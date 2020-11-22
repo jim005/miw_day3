@@ -6,43 +6,43 @@
 if (!empty($_POST['email'])) {
 
     // Sending invitation by email
-    header('Location: send_email.php?email='.$_POST['email']);
+    header('Location: send_email.php?email=' . $_POST['email']);
     exit;
-
 }
 
 $body_class = "";
 
 // Display delivery status, (tips anti-refreshing) 
 if (!empty($_GET['delivery']) and $_GET['delivery'] === "sent") {
-
-    // Sending invitation by email
-    // echo "OK c'est envoyé..";
     $body_class = "delivery_sent";
 }
-
-
-
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
-
-    <title></title>
-
-    <style type="text/css">
-        .delivery_sent {
-            background-color: green;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
 
 </head>
-<body class="<?= $body_class ?>">
 
-<form action="send_email.php" method="post">
-    <input type="email" name="email" placeholder="Ton email de star..." required/>
-    <input type="submit" value="Submit"/>
-</form>
+<body class="<?= $body_class ?>">
+    <div class="container">
+        <form action="send_email.php" method="post">
+            <input type="email" name="email" placeholder="Ton email de star..." required />
+            <button class="btnSubmit">Inscris-toi !<span class="iconMessage"></i></button>
+        </form>
+        <div class="messageSend">
+            <img class="iconMessageSend" src="img/iconMessageSend.svg">
+        </div>
+
+    </div>
+
+
 
 </body>
+
 </html>

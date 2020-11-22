@@ -1,0 +1,90 @@
+/* Page inscription - Etat non envoyé */
+
+body {
+    /* Comportement */
+    display: flex;
+    justify-content: center;
+    /* Dimension */
+    height: 100vh;
+    max-height: 600px;
+    width: 100vw;
+    min-width: 250px;
+    /* width + margin input */
+    /* Background */
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    /* Comportement */
+    display: flex;
+    justify-content: center;
+    /* Position */
+    position: relative;
+    width: 80vw;
+    height: 100%;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 180px;
+}
+
+input[type="email"], button {
+    height: 55px;
+    margin: 6px;
+    padding: 15px;
+}
+
+input[type="email"] {
+    font-weight: bold;
+    color: #8D8B8B;
+    width: 230px;
+    border: 1px solid #B2B2B2;
+    border-radius: 5px 0px 0px 5px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #C30078;
+    color: white;
+    width: 170px;
+    border-radius: 0px 6px 6px 0px;
+}
+
+.iconMessage {
+    background: url('../img/iconMessage.svg') no-repeat top left;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+}
+.messageSend{
+    display: none;
+}
+/* Page inscription: Etat email envoyé */
+.delivery_sent form {
+    display: none;
+}
+.delivery_sent .messageSend {
+    display: block;
+    height: 130px;
+    background: #FFFFFF80 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 32px;
+    padding: 25px;
+}
+.delivery_sent .messageSend img {
+    height: 100%;
+}
+.delivery_sent .container{
+    display: flex;
+    align-items: center;
+} 
