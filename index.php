@@ -23,7 +23,7 @@ if (!empty($_GET['delivery']) and $_GET['delivery'] === "sent") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
+    <meta name="description" content="Inscris toi à la meilleure soirée !">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 
@@ -32,11 +32,12 @@ if (!empty($_GET['delivery']) and $_GET['delivery'] === "sent") {
 <body class="<?= $body_class ?>">
     <div class="container">
         <form action="send_email.php" method="post">
-            <input type="email" name="email" placeholder="Ton email de star..." required />
-            <button class="btnSubmit">Inscris-toi !<span class="iconMessage"></i></button>
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="Ton email de star..." required />
+            <button class="btnSubmit">Inscris-toi !<i class="icon-emailVip"></i></button>
         </form>
         <div class="messageSend">
-            <img class="iconMessageSend" src="img/iconMessageSend.svg">
+            <i class="icon-emailSend"></i>
         </div>
 
     </div>
