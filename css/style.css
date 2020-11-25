@@ -142,6 +142,9 @@ form i{
     border-radius: 32px;
     padding: 15px;
 }
+.delivery_sent .messageSend i{
+    color: #C30078;
+}
 .delivery_sent .messageSend img {
     height: 100%;
 }
