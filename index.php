@@ -25,7 +25,7 @@ if (!empty($_GET['delivery']) and $_GET['delivery'] === "sent") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Inscris toi à la meilleure soirée !">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Modèle invitation email</title>
 
 </head>
 
